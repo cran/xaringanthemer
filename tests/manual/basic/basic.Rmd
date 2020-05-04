@@ -1,0 +1,216 @@
+---
+title: "Presentation Ninja"
+subtitle: "\u2694 <br/>with xaringan and xaringanthemer"  
+author: "Yihui Xie"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    chakra: remark-latest.min.js
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: center, middle
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.showtext = TRUE, fig.dpi = 300, fig.width = 11, fig.height = 5, dev = "svg")
+```
+
+```{r xaringan-themer, include=TRUE, echo=FALSE}
+library(xaringanthemer)
+# style_mono_accent(
+#   # text_font_google = google_font("Noto Sans"),
+#   # header_font_google = google_font("Cabin", "600", "600i"),
+#   # header_font_weight = "600",
+#   # header_h1_font_size = "2.75rem",
+#   # header_h2_font_size = "2.25rem",
+#   # header_h3_font_size = "1.75rem",
+#   # code_font_size = "0.9rem",
+#   # code_inline_font_size = "1rem",
+#   base_color = "#466683",
+#   # code_font_family = "Fira Code",
+#   colors = c("light-blue" = "#bad4ed", blue = "#466683")
+# )
+
+style_duo(
+  primary_color = "#002b36",
+  secondary_color = "#31b09e",
+  text_font_family = "Droid Serif",
+  text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
+  header_font_google = google_font("Yanone Kaffeesatz"),
+  extra_fonts = list(
+    google_font("Sofia"),
+    # Young Serif by uplaod.fr
+    "https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css"
+  ),
+  extra_css = list(
+    ".title-slide h2" = list("font-family" = "Sofia"),
+    blockquote = list("font-family" = "youngserifregular")
+  )
+)
+```
+
+# xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+class: header_background
+
+# Hello World
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+```{r eval=FALSE, tidy=FALSE}
+devtools::install_github("yihui/xaringan")
+```
+
+--
+
+.bg-light-blue[You are recommended] to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a .blue[new R Markdown document] from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+
+--
+
+- Click the `Knit` button to compile it;
+
+--
+
+- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
+
+.footnote[
+[1] 中文用户请看[这份教程](http://slides.yihui.name/xaringan/zh-CN.html)
+
+[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
+]
+
+---
+
+# A Quote
+
+> There one was a man from Nantucket. Whose heart was stuck in a bucket.
+
+---
+
+```{r ggplot2-demo}
+library(ggplot2)
+ggplot(iris) +
+  aes(Petal.Length, Petal.Width) +
+  geom_point() +
+  theme_xaringan()
+```
+
+---
+background-image: url(`r xaringan:::karl`)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# You only live once!
+
+---
+
+# Hello Ninja
+
+As a presentation ninja, you certainly should not be satisfied by the "Hello World" example. You need to understand more about two things:
+
+1. The [remark.js](https://remarkjs.com) library;
+
+1. The **xaringan** package;
+
+Basically **xaringan** injected the chakra of R Markdown (minus Pandoc) into **remark.js**. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (**knitr**).
+
+---
+
+# remark.js
+
+You can see an introduction of remark.js from [its homepage](https://remarkjs.com). You should read the [remark.js Wiki](https://github.com/gnab/remark/wiki) at least once to know how to
+
+- create a new slide (Markdown syntax<sup>*</sup> and slide properties);
+
+- format a slide (e.g. text alignment);
+
+- configure the slideshow;
+
+- and use the presentation (keyboard shortcuts).
+
+It is important to be familiar with remark.js before you can understand the options in **xaringan**.
+
+.footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purposes. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
+
+---
+background-image: url(`r xaringan:::karl`)
+background-size: cover
+class: center, bottom, inverse
+
+# I was so happy to have discovered remark.js!
+
+---
+class: inverse, middle, center
+
+# Using xaringan
+
+---
+
+# xaringan
+
+Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
+
+```yaml
+---
+title: "A Cool Presentation"
+output:
+  xaringan::moon_reader
+    yolo: true
+    nature:
+      autoplay: 30000
+---
+```
+
+See the help page `?xaringan::moon_reader` for all possible options that you can use.
+
+---
+
+# remark.js vs xaringan
+
+Some differences between using remark.js (left) and using **xaringan** (right):
+
+.pull-left[
+1. Start with a boilerplate HTML file;
+
+1. Plain Markdown;
+
+1. Write JavaScript to autoplay slides;
+
+1. Manually configure MathJax;
+
+1. Highlight code with `*`;
+
+1. Edit Markdown source and refresh browser to see updated slides;
+]
+
+.pull-right[
+1. Start with an R Markdown document;
+
+1. R Markdown (can embed R/other code chunks);
+
+1. Provide an option `autoplay`;
+
+1. MathJax just works;<sup>*</sup>
+
+1. Highlight code with `{{}}`;
+
+1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
+]
+
+.footnote[[*] Not really. See next page.]
