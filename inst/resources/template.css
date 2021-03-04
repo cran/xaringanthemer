@@ -31,6 +31,7 @@
   --text-font-base: {{text_font_base}};
   --header-font-family: {{header_font_family}};
   --header-font-is-google: {{header_font_is_google}};
+  --header-font-family-fallback: {{header_font_family_fallback}};
   --code-font-family: {{code_font_family}};
   --code-font-is-google: {{code_font_is_google}};
   --base-font-size: {{base_font_size}};
@@ -51,6 +52,7 @@
   --inverse-text-color: {{inverse_text_color}};
   --inverse-background-color: {{inverse_background_color}};
   --inverse-header-color: {{inverse_header_color}};
+  --inverse-link-color: {{inverse_link_color}};
   --title-slide-background-color: {{title_slide_background_color}};
   --title-slide-text-color: {{title_slide_text_color}};
   --header-background-color: {{header_background_color}};
@@ -68,7 +70,7 @@ body {
   color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: var(--header-font-family);
+  font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: {{header_font_weight}};
   color: var(--header-color);
 }
@@ -133,6 +135,9 @@ a, a > code {
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
 }
+.inverse a, .inverse a > code {
+  color: var(--inverse-link-color);
+}
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);
 }
@@ -170,7 +175,7 @@ a, a > code {
   float: right;
   width: 47%;
 }
-.pull-right ~ * {
+.pull-right + * {
   clear: both;
 }
 img, video, iframe {

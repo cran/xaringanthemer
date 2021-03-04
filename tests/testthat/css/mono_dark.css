@@ -31,6 +31,7 @@
   --text-font-base: sans-serif;
   --header-font-family: Cabin;
   --header-font-is-google: 1;
+  --header-font-family-fallback: Georgia, serif;
   --code-font-family: 'Source Code Pro';
   --code-font-is-google: 1;
   --base-font-size: 20px;
@@ -51,6 +52,7 @@
   --inverse-text-color: #1E2523;
   --inverse-background-color: #cbf7ed;
   --inverse-header-color: #1E2523;
+  --inverse-link-color: #cbf7ed;
   --title-slide-background-color: #cbf7ed;
   --title-slide-text-color: #1E2523;
   --header-background-color: #cbf7ed;
@@ -70,7 +72,7 @@ body {
   color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: var(--header-font-family);
+  font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: 600;
   color: var(--header-color);
 }
@@ -127,6 +129,9 @@ a, a > code {
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
 }
+.inverse a, .inverse a > code {
+  color: var(--inverse-link-color);
+}
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);
 }
@@ -161,7 +166,7 @@ a, a > code {
   float: right;
   width: 47%;
 }
-.pull-right ~ * {
+.pull-right + * {
   clear: both;
 }
 img, video, iframe {

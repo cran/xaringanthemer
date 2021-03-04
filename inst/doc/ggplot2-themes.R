@@ -98,7 +98,7 @@ g_diamonds_with_text +
 
 ## ----eval=FALSE---------------------------------------------------------------
 #  font_url <- file.path(
-#    "https://fontlibrary.org/assets/fonts/glacial-indifference",
+#    "https://fontlibrary.org/assets/fonts/glacial-indifference/",
 #    "5f2cf277506e19ec77729122f27b1faf/0820b3c58fed35de298219f314635982",
 #    "GlacialIndifferenceRegular.ttf"
 #  )

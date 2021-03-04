@@ -74,10 +74,10 @@ scale_xaringan_colour_continuous(
 One of "color", "colour", or "fill".}
 
 \item{...}{Arguments passed on to either the \pkg{colorspace} scale
-functions — one of \code{\link[colorspace:scale_color_discrete_sequential]{colorspace::scale_color_discrete_sequential()}},
-\code{\link[colorspace:scale_color_continuous_sequential]{colorspace::scale_color_continuous_sequential()}},
-\code{\link[colorspace:scale_fill_discrete_sequential]{colorspace::scale_fill_discrete_sequential()}}, or
-\code{\link[colorspace:scale_fill_continuous_sequential]{colorspace::scale_fill_continuous_sequential()}} — or to
+functions — one of \code{\link[colorspace:scale_colour_discrete_sequential]{colorspace::scale_color_discrete_sequential()}},
+\code{\link[colorspace:scale_colour_continuous_sequential]{colorspace::scale_color_continuous_sequential()}},
+\code{\link[colorspace:scale_colour_discrete_sequential]{colorspace::scale_fill_discrete_sequential()}}, or
+\code{\link[colorspace:scale_colour_continuous_sequential]{colorspace::scale_fill_continuous_sequential()}} — or to
 \link[ggplot2:continuous_scale]{ggplot2::continuous_scale} or \link[ggplot2:discrete_scale]{ggplot2::discrete_scale}.}
 
 \item{color}{A color value, in hex, to override the default color. Otherwise,
@@ -96,7 +96,7 @@ value of \code{inverse_header_color}}
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.  See

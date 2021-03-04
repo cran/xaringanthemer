@@ -3,7 +3,7 @@
 #'
 #' @description
 #'
-#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
+#' `r lifecycle::badge("maturing")`
 #'
 #' Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
 #' \pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
@@ -44,10 +44,10 @@
 #'   )
 #'
 #'   library(ggplot2)
-#'   ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
-#'     ggtitle("Yet another Iris plot") +
+#'     ggtitle("Fuel Efficiency of Various Cars") +
 #'     theme_xaringan()
 #' }
 #' @return A ggplot2 theme
@@ -96,7 +96,7 @@ theme_xaringan <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
+#' `r lifecycle::badge("maturing")`
 #'
 #' A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 #' \pkg{xaringan} slide colors and styles as styled by [xaringanthemer]. See
@@ -132,10 +132,10 @@ theme_xaringan <- function(
 #'   )
 #'
 #'   library(ggplot2)
-#'   ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
-#'     ggtitle("Yet another Iris plot") +
+#'     ggtitle("Fuel Efficiency of Various Cars") +
 #'     # themed to match the inverse slides: teal background with dark blue text
 #'     theme_xaringan_inverse()
 #' }
@@ -185,7 +185,7 @@ theme_xaringan_inverse <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
+#' `r lifecycle::badge("maturing")`
 #'
 #' Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan}
 #' slide theme created by [xaringanthemer]. The theme is designed to create a
@@ -237,8 +237,8 @@ theme_xaringan_inverse <- function(
 #' if (has_ggplot2) {
 #'   library(ggplot2)
 #'
-#'   plot1 <- ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   plot1 <- ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
 #'     theme_xaringan_base(
 #'       text_color = "#602f6b",       # imperial
@@ -249,16 +249,16 @@ theme_xaringan_inverse <- function(
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
-#'       title = "Basic Iris Plot",
+#'       title = "Fuel Efficiency of Various Cars",
 #'       subtitle = "+ theme_xaringan_base()",
 #'       caption = "xaringanthemer"
 #'     )
 #'
 #'   print(plot1)
 #'
-#'   plot2 <- ggplot(iris) +
-#'     aes(Sepal.Width) +
-#'     geom_histogram(binwidth = 0.1) +
+#'   plot2 <- ggplot(mpg) +
+#'     aes(hwy) +
+#'     geom_histogram(binwidth = 2) +
 #'     theme_xaringan_base(
 #'       text_color = "#a8a9c8",       # light purple
 #'       background_color = "#303163", # deep slate purple
@@ -268,7 +268,7 @@ theme_xaringan_inverse <- function(
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
-#'       title = "Basic Iris Plot",
+#'       title = "Highway Fuel Efficiency",
 #'       subtitle = "+ theme_xaringan_base()",
 #'       caption = "xaringanthemer"
 #'     )
@@ -380,7 +380,7 @@ theme_xaringan_base <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
+#' `r lifecycle::badge("maturing")`
 #'
 #' Set \pkg{ggplot2} _geom_ defaults to match [theme_xaringan()] with
 #' `theme_xaringan_set_defaults()` and restore the standard or previously-set
@@ -511,7 +511,7 @@ safely_set_geom <- function(geom, new) {
 #'
 #' @description
 #'
-#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
+#' `r lifecycle::badge("maturing")`
 #'
 #' Color and fill single-color scales for discrete and continuous values,
 #' created using the primary accent color of the xaringanthemer styles.  See

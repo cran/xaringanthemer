@@ -72,7 +72,7 @@ not available locally.}
 A ggplot2 theme
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
 Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
 \pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
@@ -98,10 +98,10 @@ if (has_ggplot2) {
   )
 
   library(ggplot2)
-  ggplot(iris) +
-    aes(Petal.Length, Petal.Width) +
+  ggplot(mpg) +
+    aes(cty, hwy) +
     geom_point() +
-    ggtitle("Yet another Iris plot") +
+    ggtitle("Fuel Efficiency of Various Cars") +
     theme_xaringan()
 }
 }

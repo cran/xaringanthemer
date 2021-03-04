@@ -28,8 +28,11 @@ style_duo_accent_inverse(
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),
   inverse_text_shadow = FALSE,
-  inverse_header_color = choose_dark_or_light(secondary_color, black_color, white_color),
-  title_slide_text_color = choose_dark_or_light(primary_color, black_color, white_color),
+  inverse_header_color = choose_dark_or_light(secondary_color, black_color,
+    white_color),
+  inverse_link_color = link_color,
+  title_slide_text_color = choose_dark_or_light(primary_color, black_color,
+    white_color),
   title_slide_background_color = primary_color,
   title_slide_background_image = NULL,
   title_slide_background_size = NULL,
@@ -54,7 +57,8 @@ style_duo_accent_inverse(
   header_background_text_color = background_color,
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
-  header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
+  header_background_ignore_classes = c("normal", "inverse", "title", "middle",
+    "bottom"),
   text_slide_number_font_size = "0.9em",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
@@ -65,6 +69,7 @@ style_duo_accent_inverse(
   header_font_google = NULL,
   header_font_family = xaringanthemer_font_default("header_font_family"),
   header_font_weight = xaringanthemer_font_default("header_font_weight"),
+  header_font_family_fallback = "Georgia, serif",
   header_font_url = xaringanthemer_font_default("header_font_url"),
   code_font_google = NULL,
   code_font_family = xaringanthemer_font_default("code_font_family"),
@@ -195,6 +200,12 @@ Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 Modifies the \verb{.inverse h1, .inverse h2, .inverse h3} classes. The value of
 this variable is also stored as a CSS variable that can be referenced with
 \code{var(--inverse-header-color)} in any argument of a style function or in
+custom CSS.}
+
+\item{inverse_link_color}{Inverse Link Color. Defaults to \code{link_color}.
+Modifies the \verb{.inverse a, .inverse a > code} classes. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--inverse-link-color)} in any argument of a style function or in
 custom CSS.}
 
 \item{title_slide_text_color}{Title Slide Text Color. Defaults to
@@ -378,6 +389,12 @@ argument of a style function or in custom CSS.}
 \verb{h1, h2, h3} elements. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
 property values.}
+
+\item{header_font_family_fallback}{Header Font Family Fallback. Defaults to
+Georgia, serif. Modifies the \verb{h1, h2, h3} elements. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--header-font-family-fallback)} in any argument of a style function
+or in custom CSS.}
 
 \item{header_font_url}{Header Font URL. Defaults to
 \code{xaringanthemer_font_default("header_font_url")}. Modifies the
