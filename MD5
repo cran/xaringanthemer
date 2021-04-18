@@ -1,7 +1,7 @@
-b77a92b72eeedd6242256c10bca503ee *DESCRIPTION
+04d23beec3fff57a73215d0b4d29dcd8 *DESCRIPTION
 419778eff1a491404a718a478b0790e6 *LICENSE
 3fa0aa486e9e9aa7fda4e39e13c4eb93 *NAMESPACE
-233ab672bfab47d4fd3cefe63c4c9d96 *NEWS.md
+6ff12824b238a4abd78314daea26e76c *NEWS.md
 0dcdf90f018ce8974c9b6cafa30b0c9e *R/color.R
 44f090052f676ea91fac190c3cceb761 *R/css.R
 7e6de1328dc36730e1b774e3df7f20b0 *R/ggplot2.R
@@ -106,14 +106,14 @@ d4f7944f7c81e058f7a86697252ed58b *tests/testthat/css/mono_light-header_bg.css
 0b4120e8050bf84c772ee54ccfa1772c *tests/testthat/css/solarized_light.css
 c8cabb2b90c43393b260a67cf38e2ead *tests/testthat/css/xaringan.css
 72d3f550943031f4f0b99ed4a4b502a2 *tests/testthat/google-font-print.txt
-29405d64ea9b59d8efbba23bebd2b6d9 *tests/testthat/helper-session.R
+7ff63fd60cf1baa5bd3197aa4cf680f9 *tests/testthat/helper-session.R
 827abf91b8b9ff58d4d0318f317fc21b *tests/testthat/test-color.R
 627bb53e3af32cb973d22424253e1287 *tests/testthat/test-css.R
 f2ba8c583cd7cd226614e6c33f8de1c0 *tests/testthat/test-ggplot2.R
 a599854d6dcda9b941dc0b6d92eac34f *tests/testthat/test-helpers.R
 248a6836a0ba9813255afbf186dd94d3 *tests/testthat/test-style_extra_css.R
 b8d62e676830ea251eb9cec76572b9b1 *tests/testthat/test-style_xaringan.R
-2d95828aebbfe3c571d0f570fa58675c *tests/testthat/test-themes.R
+8465e8440d4eb9cda372aff9241215ec *tests/testthat/test-themes.R
 5699e57282eefc0e6426a20aa9ffd90d *tests/testthat/test-utils.R
 97d4ea4ecd307db68e21eec73ae7f02c *tests/testthat/test-xaringanthemer-deprecated.R
 e243a889fa2f6b30919277151c20134a *vignettes/ggplot2-themes.Rmd
