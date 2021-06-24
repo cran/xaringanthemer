@@ -184,7 +184,7 @@
 #'   `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the
 #'   `.remark-slide-content` class.
 #' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to
-#'   0.9em. Modifies the `.remark-slide-number` class. Accepts CSS
+#'   0.9rem. Modifies the `.remark-slide-number` class. Accepts CSS
 #'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
 #'   property values.
 #' @param text_font_google Use `google_font()` to specify body font. Defaults
@@ -200,6 +200,8 @@
 #'   element. Accepts CSS
 #'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
 #'   property values.
+#' @param text_bold_font_weight Body Bold Text Font Weight. Defaults to bold.
+#'   Modifies the `strong` element.
 #' @param text_font_url Body Text Font URL(s). Defaults to
 #'   `xaringanthemer_font_default("text_font_url")`. Modifies the
 #'   `@import url()` elements.
@@ -254,6 +256,10 @@
 #' @param code_font_family_fallback Code Font Fallback. Defaults to
 #'   `xaringanthemer_font_default("code_font_family_fallback")`. Modifies the
 #'   `.remark-code, .remark-inline-code` classes.
+#' @param link_decoration Text decoration of links. Defaults to none. Modifies
+#'   the `a, a > code` elements. Accepts CSS
+#'   [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+#'   property values.
 #' @template theme_params
 #' @template style-usage
 #' @template style_solarized_dark
@@ -304,10 +310,11 @@ style_solarized_dark <- function(
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
-  text_slide_number_font_size = "0.9em",
+  text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),
+  text_bold_font_weight = "bold",
   text_font_url = xaringanthemer_font_default("text_font_url"),
   text_font_family_fallback = xaringanthemer_font_default("text_font_family_fallback"),
   text_font_base = "sans-serif",
@@ -321,6 +328,7 @@ style_solarized_dark <- function(
   code_font_size = "0.9rem",
   code_font_url = xaringanthemer_font_default("code_font_url"),
   code_font_family_fallback = xaringanthemer_font_default("code_font_family_fallback"),
+  link_decoration = "none",
   colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,

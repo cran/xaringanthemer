@@ -50,10 +50,11 @@ style_solarized_dark(
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle",
     "bottom"),
-  text_slide_number_font_size = "0.9em",
+  text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),
+  text_bold_font_weight = "bold",
   text_font_url = xaringanthemer_font_default("text_font_url"),
   text_font_family_fallback = xaringanthemer_font_default("text_font_family_fallback"),
   text_font_base = "sans-serif",
@@ -67,6 +68,7 @@ style_solarized_dark(
   code_font_size = "0.9rem",
   code_font_url = xaringanthemer_font_default("code_font_url"),
   code_font_family_fallback = xaringanthemer_font_default("code_font_family_fallback"),
+  link_decoration = "none",
   colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,
@@ -302,7 +304,7 @@ Background will not be Applied. Defaults to
 \code{.remark-slide-content} class.}
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to
-0.9em. Modifies the \code{.remark-slide-number} class. Accepts CSS
+0.9rem. Modifies the \code{.remark-slide-number} class. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
 property values.}
 
@@ -321,6 +323,9 @@ style function or in custom CSS.}
 element. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
 property values.}
+
+\item{text_bold_font_weight}{Body Bold Text Font Weight. Defaults to bold.
+Modifies the \code{strong} element.}
 
 \item{text_font_url}{Body Text Font URL(s). Defaults to
 \code{xaringanthemer_font_default("text_font_url")}. Modifies the
@@ -388,6 +393,11 @@ elements.}
 \item{code_font_family_fallback}{Code Font Fallback. Defaults to
 \code{xaringanthemer_font_default("code_font_family_fallback")}. Modifies the
 \verb{.remark-code, .remark-inline-code} classes.}
+
+\item{link_decoration}{Text decoration of links. Defaults to none. Modifies
+the \verb{a, a > code} elements. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration}{text-decoration}
+property values.}
 
 \item{colors}{A named vector of custom colors. The names of the colors
 become CSS variables and classes that can be used within your slides.

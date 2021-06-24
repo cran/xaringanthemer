@@ -1,7 +1,7 @@
 Type: Package
 Package: xaringanthemer
 Title: Custom 'xaringan' CSS Themes
-Version: 0.3.4
+Version: 0.4.0
 Authors@R: 
     person(given = "Garrick",
            family = "Aden-Buie",
@@ -26,8 +26,8 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2021-04-17 02:13:42 UTC; garrick
+Packaged: 2021-06-24 01:57:20 UTC; garrick
 Author: Garrick Aden-Buie [aut, cre] (<https://orcid.org/0000-0002-7111-0077>)
 Maintainer: Garrick Aden-Buie <garrick@adenbuie.com>
 Repository: CRAN
-Date/Publication: 2021-04-18 02:10:02 UTC
+Date/Publication: 2021-06-24 05:00:02 UTC
