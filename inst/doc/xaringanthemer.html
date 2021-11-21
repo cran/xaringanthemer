@@ -199,7 +199,7 @@ img { max-width: 100%; }
 <p><strong>xaringanthemer</strong> includes a number of functions that provide themed <strong>xaringan</strong> styles. All of the styling functions start with the <code>style_</code> prefix.</p>
 <p>The goal of each style function is to quickly set up a coordinated color palette for your slides based on one or two starter colors. Styles based on one color start with <code>style_mono_</code> and styles based on two colors start with <code>style_duo_</code>. How the starter colors are used is described in the final portion of the style function name. For example, <code>style_mono_accent()</code> uses a single color as an accent color.</p>
 <p>Note that the colors used below are for demonstration only, the point of the <code>style_</code> functions is for you to choose your own color palette!</p>
-<p>If you color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
+<p>If your color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
 <div id="monotone" class="section level3">
 <h3>Monotone</h3>
 <p>Use these functions to automatically create a consistent color palette for your slides, based around a single color.</p>
@@ -379,7 +379,7 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">purple =</span> <span class="st">&quot;#3e2f5b&quot;</span>,</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">orange =</span> <span class="st">&quot;#ff8811&quot;</span>,</span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">green =</span> <span class="st">&quot;#136f63&quot;</span>,</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">white =</span> <span class="st">&quot;#FFFFFF&quot;</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">white =</span> <span class="st">&quot;#FFFFFF&quot;</span></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code>var(--red)</code>.</p>
 <p>So slide text like this</p>

@@ -12,7 +12,6 @@
 #' if (requireNamespace("scales", quietly = TRUE)) {
 #'   scales::show_col(c(blue_light, blue, blue_dark))
 #' }
-#'
 #' @return A character string with the lightened or darkened color in
 #'   hexadecimal format.
 #' @name lighten_darken_color
@@ -49,7 +48,6 @@ darken_color <- function(color_hex, strength = 0.8) {
 #' if (requireNamespace("scales", quietly = TRUE)) {
 #'   scales::show_col(c(blue, blue_transparent))
 #' }
-#'
 #' @return A character string with added opacity level as hexadecimal characters.
 #' @export
 apply_alpha <- function(color_hex, opacity = 0.5) {
@@ -83,7 +81,6 @@ adjust_value_color <- function(color_hex, strength = 0.5) {
 #' if (requireNamespace("scales", quietly = TRUE)) {
 #'   scales::show_col(c(light_green, contrast_green, dark_purple, contrast_purple))
 #' }
-#'
 #' @return The `black` color or `white` color according to which color provides
 #'   the greates contrast with the input color.
 #'
@@ -121,8 +118,13 @@ prepare_colors <- function(colors = NULL) {
       call. = FALSE)
   }
 
-  if (any(grepl("[^[:alpha:]_-]", names(colors)))) {
-    stop("Color names in `colors` must be valid CSS classes", call. = FALSE)
+  maybe_bad_css <- unique(grep("^[_-]|[ .>~*:|+}/]", names(colors), value = TRUE))
+  if (length(maybe_bad_css) > 0) {
+    warning(
+      "Color names in `colors` should be valid CSS classes: ",
+      paste0("'", maybe_bad_css, "'", collapse = ", "),
+      call. = FALSE
+    )
   }
 
   whisker::iteratelist(colors, "color_name")
