@@ -25,7 +25,7 @@ style_duo(
   inverse_background_color = secondary_color,
   inverse_text_color = primary_color,
   inverse_text_shadow = FALSE,
-  inverse_header_color = primary_color,
+  inverse_header_color = inverse_text_color,
   inverse_link_color = link_color,
   title_slide_text_color = secondary_color,
   title_slide_background_color = primary_color,
@@ -51,8 +51,7 @@ style_duo(
   header_background_text_color = background_color,
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
-  header_background_ignore_classes = c("normal", "inverse", "title", "middle",
-    "bottom"),
+  header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
   text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
@@ -179,7 +178,7 @@ in any argument of a style function or in custom CSS.}
 Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 
 \item{inverse_header_color}{Inverse Header Color. Defaults to
-\code{primary_color}. Modifies the \verb{.inverse h1, .inverse h2, .inverse h3}
+\code{inverse_text_color}. Modifies the \verb{.inverse h1, .inverse h2, .inverse h3}
 classes. The value of this variable is also stored as a CSS variable that
 can be referenced with \code{var(--inverse-header-color)} in any argument of a
 style function or in custom CSS.}
@@ -447,7 +446,9 @@ colors.
  To use the styles created by this theme function, make sure
 that you use \code{xaringan-themer.css} as your CSS file in your slides' YAML
 header. If you change the name of the output file using the \code{outfile}
-argument, use that name instead of the default file name.\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
+argument, use that name instead of the default file name.
+
+\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
 xaringan::moon_reader:
   css: xaringan-themer.css
 }\if{html}{\out{</div>}}
