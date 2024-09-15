@@ -1,9 +1,9 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
   comment = "#>",
-  fig.width = 6, 
+  fig.width = 6,
   fig.height = 4
 )
 
@@ -23,8 +23,8 @@ style_mono_accent(
 ## ----ggplot2-demo-1, out.width = "48%", fig.show="hide"-----------------------
 library(ggplot2)
 
-g_base <- ggplot(mpg) + 
-  aes(hwy, cty) + 
+g_base <- ggplot(mpg) +
+  aes(hwy, cty) +
   geom_point() +
   labs(x = "Highway MPG", y = "City MPG", title = "Fuel Efficiency")
 
@@ -81,10 +81,10 @@ ggplot(mpg, aes(x = hwy, y = cty)) +
   scale_xaringan_color_continuous(breaks = seq(3, 12, 2), inverse = TRUE, begin = 1, end = 0)
 
 ## ----text demo, fig.width = 10------------------------------------------------
-g_diamonds_with_text <- 
-  g_diamonds + 
+g_diamonds_with_text <-
+  g_diamonds +
   geom_text(aes(y = ..count.., label = format(..count.., big.mark = ",")),
-            vjust = -0.30, size = 8, stat = "count") +
+    vjust = -0.30, size = 8, stat = "count") +
   labs(x = "Cut", y = "Count")
 
 g_diamonds_with_text + theme_xaringan()

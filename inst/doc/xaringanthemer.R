@@ -82,7 +82,7 @@ demo_function_call(style_solarized_light, 0)
 ## ----style_solarized_dark-----------------------------------------------------
 demo_function_call(style_solarized_dark, 0)
 
-## ---- results='asis', echo=FALSE----------------------------------------------
+## ----results='asis', echo=FALSE-----------------------------------------------
 tvv <- xaringanthemer:::template_variables$variable
 cat(paste0("- `", tvv[grepl("^text_", tvv)][1:5], "`"), sep = "\n")
 cat("- *and more ...*")
