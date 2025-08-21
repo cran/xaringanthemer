@@ -34,7 +34,7 @@ ggplot(diamonds) +
   scale_xaringan_fill_discrete()
 
 ## ----link-to-plot-image, echo=FALSE, eval=IN_PKGDOWN, results='asis'----------
-#  cat("![](../reference/figures/index-theme_xaringan_demo-1.png)")
+# cat("![](../reference/figures/index-theme_xaringan_demo-1.png)")
 
 ## ----include=FALSE------------------------------------------------------------
 IS_README <- exists("IS_README") && IS_README
@@ -91,40 +91,40 @@ cat("- *and more ...*")
 cat(paste0("- `", tvv[grepl("^title_slide_", tvv)], "`"), sep = "\n")
 
 ## ----eval=FALSE, echo=TRUE----------------------------------------------------
-#  style_xaringan(
-#    text_font_family = "Droid Serif",
-#    text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
-#    header_font_google = google_font("Yanone Kaffeesatz")
-#  )
+# style_xaringan(
+#   text_font_family = "Droid Serif",
+#   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
+#   header_font_google = google_font("Yanone Kaffeesatz")
+# )
 
 ## ----results='asis', echo=FALSE-----------------------------------------------
 cat(paste0("`", tvv[grepl("_font_google$", tvv)], "`", collapse = ", "))
 
 ## ----eval=FALSE, echo=TRUE----------------------------------------------------
-#  style_mono_light(
-#    header_font_google = google_font("Josefin Slab", "600"),
-#    text_font_google   = google_font("Work Sans", "300", "300i"),
-#    code_font_google   = google_font("IBM Plex Mono")
-#  )
+# style_mono_light(
+#   header_font_google = google_font("Josefin Slab", "600"),
+#   text_font_google   = google_font("Work Sans", "300", "300i"),
+#   code_font_google   = google_font("IBM Plex Mono")
+# )
 
 ## ----eval=FALSE, echo=TRUE----------------------------------------------------
-#  style_solarized_dark(
-#    code_font_family = "Fira Code",
-#    code_font_url = "https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"
-#  )
+# style_solarized_dark(
+#   code_font_family = "Fira Code",
+#   code_font_url = "https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"
+# )
 
 ## ----eval=FALSE, echo=TRUE----------------------------------------------------
-#  style_mono_light(
-#    extra_fonts = list(
-#      google_font("Sofia"),
-#      # Young Serif by uplaod.fr
-#      "https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css",
-#    ),
-#    extra_css = list(
-#      ".title-slide h2" = list("font-family" = "Sofia"),
-#      blockquote = list("font-family" = "youngserifregular")
-#    )
-#  )
+# style_mono_light(
+#   extra_fonts = list(
+#     google_font("Sofia"),
+#     # Young Serif by uplaod.fr
+#     "https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css",
+#   ),
+#   extra_css = list(
+#     ".title-slide h2" = list("font-family" = "Sofia"),
+#     blockquote = list("font-family" = "youngserifregular")
+#   )
+# )
 
 ## ----results='asis', echo=FALSE-----------------------------------------------
 extra_css <- list(

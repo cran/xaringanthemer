@@ -1,7 +1,7 @@
 Type: Package
 Package: xaringanthemer
 Title: Custom 'xaringan' CSS Themes
-Version: 0.4.3
+Version: 0.4.4
 Authors@R: 
     person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7111-0077"))
@@ -24,8 +24,9 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2024-09-15 13:48:43 UTC; garrick
-Author: Garrick Aden-Buie [aut, cre] (<https://orcid.org/0000-0002-7111-0077>)
+Packaged: 2025-08-20 14:13:52 UTC; garrick
+Author: Garrick Aden-Buie [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-7111-0077>)
 Maintainer: Garrick Aden-Buie <garrick@adenbuie.com>
 Repository: CRAN
-Date/Publication: 2024-09-15 14:00:02 UTC
+Date/Publication: 2025-08-21 09:40:02 UTC
